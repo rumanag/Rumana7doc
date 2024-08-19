@@ -1,5 +1,5 @@
 
-/* 1era Clase de 7Days of Code0*/
+/* --------------------------------------........----------1era Clase de 7Days of Code0*------------------------------------------------------------*/
 
 let numeroUn = 1
 let stringUn = '1'
@@ -10,15 +10,17 @@ let stringTreinta = '30'
 let numeroDiez = 10
 let stringDiez = '10'
 
+
 function compararUno() {
 
-    /*
+   /*
     if (COMPARAR numeroUn y stringUn) {
     console.log('Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes')
     } else {
     console.log('Las variables numeroUn y stringUn no tienen el mismo valor')
     }
     */
+
     if (numeroUn == stringUn){    
         console.log(` numeroUn == stringUn numeroUn : numeroUn=${numeroUn}-${typeof(numeroUn)} y stringUn=${stringUn}-${typeof(stringUn)}
         tienen el mismo valor, pero tipos diferentes.`);
@@ -76,4 +78,46 @@ if (numeroDiez !== stringDiez ){
         console.log(`Las variables numeroDiez: ${typeof(numeroDiez)} y stringDiez: ${typeof(stringDiez)} tienen un resultado falso `);
 }
 return
+}
+
+
+/* ---------------------------------------------------------------2a clase de 7 days of Code ----------------------------------------------*/
+
+function diaDos(){
+
+    alert("¡Saludos a todos! Hoy es el día de preguntas");
+
+    const ciudad = prompt("Escribe tu ciudad: ");
+    const msg = `¡Eres de ${ciudad}!. Te haré algunas preguntas personales.`;
+    
+    alert(msg);
+
+    let nombrePersona= prompt("¿Cuál es tu nombre?");
+    let añosPersona = prompt("¿Cuántos años tienes?");   
+    let lenguajePrograma = prompt("¿Qué lenguaje de programación estás estudiando?");
+
+    alert(`Hola ${nombrePersona}, tienes ${añosPersona} años y ya estás aprendiendo ${lenguajePrograma}!`);
+
+    let respuestaPersona = prompt(`¿ Te gusta estudiar ${lenguajePrograma}? Responde 1 para SI o 2 para NO`);
+    let respuestaBuena = 0
+
+    while (respuestaBuena == 0)  {
+       
+        let respuestaTrimmed = parseInt(respuestaPersona.trim());
+
+        if  (isNaN(respuestaTrimmed)) {
+            respuestaPersona= prompt("La respuesta no es 1 o 2. Por favor responde si te gusta estudiar con 1 = SI, 2=NO");
+
+        }   else if (respuestaTrimmed == 1){
+                alert("¡Muy bien! Sigue estudiando y tendrás éxito");
+                respuestaBuena=1
+
+        } else{
+                alert("¡Oh! Qué  pena... ¿ Ya intentaste aprender otros lenguajes?")
+                respuestaBuena=1
+        }
+    }  
+    
+    alert("Gracias por su paciencia. ¡Hasta pronto!")   
+
 }
