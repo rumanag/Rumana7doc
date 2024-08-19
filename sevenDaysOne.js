@@ -119,5 +119,57 @@ function diaDos(){
     }  
     
     alert("Gracias por su paciencia. ¡Hasta pronto!")   
+}
+
+function diaTres(){
+
+    alert("¡hola! De nuevo estamos contigo para conocer tus planes de aprendizaje y especialización futuros. ");
+
+    const areaDesarrollo=  prompt("que area de desarrollo has escogido en tu apredizaje: 1= Front-End, 2 = back-End" );
+    let respuestaBuena = 0;
+
+    while (respuestaBuena == 0)  {
+    
+        let respuestaTrimmed = parseInt(areaDesarrollo.trim());
+
+        if  (isNaN(respuestaTrimmed) || respuestaTrimmed>2) {
+            areaDesarrollo= prompt("La respuesta no es 1 o 2. Por favor responde si tu aprendizaje es 1=Front-End, 2=Back-End");
+
+        }   else {
+            respuestaBuena=1;
+        }
+    }  
+
+    let  aprenderPrograma = "";
+
+    if (areaDesarrollo == 1){
+        aprenderPrograma= prompt("¿Quieres aprender React o VUe?");
+    }   
+        else {
+            aprenderPrograma= prompt("¿Quieres aprender C# o Java?");   
+    }
+
+    const especializacion= prompt(`¿Te vas a especializar en ${areaDesarrollo ==1 ? "Front-End" : "Back-End"} = 1 o te vas a desarrollar como Fullstack = 2?`);
+    let tecnologiaString = ""
+    let tecnologiaArray = []
+    let continuaCiclo = 1
+
+    while (continuaCiclo == 1)  {
+
+        tecnologiaString =  ""
+        tecnologiaString = prompt("¿Hay alguna otra tecnología que te gustaría aprender?. Escríbela o das cancelar para terminar")
+
+        if (tecnologiaString == "") {
+
+             continuaCiclo = 0
+        
+        }   else {
+                tecnologiaArray.push(tecnologiaString)                
+            }
+    } 
+
+    alert("¡Hasta Pronto!")
+
+    console.log(tecnologiaArray)
 
 }

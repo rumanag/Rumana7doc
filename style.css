@@ -1,5 +1,5 @@
 :root {
-	--color-body: #e1be85;
+	--color-body: #f6d8ab;
     --color-header: #9eac6c;
     --color-main: #F6F6F6;
     --color-dia: #618fc4;
@@ -19,7 +19,7 @@
 body{
     box-sizing: border-box;
     background-color: var(--color-body);
-	font-family; var( --fuente-gothicA1);
+	font-family: var(--fuente-gothicA1);
     color: var(--color-font);
 }
 
@@ -41,6 +41,7 @@ body{
 button{
     border-radius: 8px;
     font-size: 1rem;
+
 }
 
 button.hover{
@@ -89,7 +90,24 @@ button.hover{
     width: 9rem;
  }
 
+ .diaTercero{
+    border: 1px solid var(--color-font);
+    margin-left: 5rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    height:3rem;
+    margin-left: 5rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    font-weight:400px;
+    font-size:1.7rem;
+    font-family: var(--fuente-gothicA1);
+    background-color:var ( --color-dia);
+ }
 
-
-
-
+ .alternativas{
+    margin-left: 3.5rem;
+    height: 3rem;
+    width: 9rem;
+ }
