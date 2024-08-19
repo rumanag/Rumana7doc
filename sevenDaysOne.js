@@ -1,6 +1,4 @@
 
-
-
 /* 1era Clase de 7Days of Code0*/
 
 let numeroUn = 1
@@ -42,8 +40,8 @@ function compararTreinta() {
     } else {
     console.log('Las variables numeroTreinta y stringTreinta no tienen el mismo tipo')
     }
-
     */
+
     if (numeroTreinta ==  parseInt(stringTreinta)){    
         console.log(` numeroTreinta ==  parseInt(stringTreinta) : numeroTreinta: ${numeroTreinta}-${typeof(numeroTreinta)} y stringTreinta: ${stringTreinta}-${typeof(stringTreinta)}
         tienen el mismo valor, y el mismo tipo a causa de parseInt.`);

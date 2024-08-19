@@ -1,20 +1,65 @@
-root {
-    --color-primaria: #000000;
-    --color-secundaria: #F6F6F6;
-    --color-terciaria: #22D4FD;
+:root {
+	--color-body: #e1be85;
+    --color-header: #9eac6c;
+    --color-main: #F6F6F6;
+    --color-dia: #618fc4;
+    --color-footer: #22D4FD;
     --color-hover: #272727;
-
+	--color-font: #031519;
+    --color-botones:#10305a00 ;
     --fuente-krona: 'Krona One', sans-serif;
-    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-gothicA1: " Gothic A1", sans-serif;
 }
 
-* {
+*{
     padding: 0;
     margin:0;
 }
 
 body{
     box-sizing: border-box;
-    background-color: var(--color-primaria);
-    color: var(--color-secundaria);
+    background-color: var(--color-body);
+	font-family; var( --fuente-gothicA1);
+    color: var(--color-font);
 }
+
+.Encabezado {
+    border:1px solid var(--color-font);
+    height: 3.5rem;
+    margin-left: 5rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    text-align:center;
+    font-weight: 600px;
+    font-size: 2.5rem;
+    font-family: var(  --fuente-gothicA1);
+    background-color: var(--color-header);   
+    background-image: url("./tools/logo7DOfCode.png") ;
+    background-repeat: no-repeat;
+}
+
+ .diaPrimero{
+    border: 1px solid var(--color-font);
+    margin-left: 5rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    display:flex;
+    height:3rem;
+    gap: 3rem;
+    margin-left: 5rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    font-weight:400px;
+    font-size:1.7rem;
+    font-family: var( --fuente-gothicA1);
+    background-color:var ( --color-dia);
+
+ }
+
+    
+
+
+
+
+
