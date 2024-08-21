@@ -1,5 +1,8 @@
 
-/* --------------------------------------........----------1era Clase de 7Days of Code0*------------------------------------------------------------*/
+
+//================================================================ 7daysOfCode= ======================================================
+
+// -------------------------------------------------------Primera Clase0*----------------------------------------------
 
 let numeroUn = 1
 let stringUn = '1'
@@ -81,7 +84,7 @@ return
 }
 
 
-/* ---------------------------------------------------------------2a clase de 7 days of Code ----------------------------------------------*/
+// -------------------------------------------------------Segunda Clase0*----------------------------------------------
 
 function diaDos(){
 
@@ -120,6 +123,9 @@ function diaDos(){
     
     alert("Gracias por su paciencia. ¡Hasta pronto!")   
 }
+
+// -------------------------------------------------------Tercera Clase0*----------------------------------------------
+
 
 function diaTres(){
 
@@ -172,4 +178,47 @@ function diaTres(){
 
     console.log(tecnologiaArray)
 
+}
+
+// ------------------------------------------------------- Cuarta Clase0*----------------------------------------------
+
+function diaCuatro(){
+
+    let maximo = 100 ;
+    let minimo = 1;
+    let tiradas = 4;
+    let  numeroEscogido = Number(prompt(`La cuestión es si puedes adivinar un número entre ${minimo} y ${maximo}, en máximo  5
+                                    intentos. Si acepta el reto, por favor indica el numero de  tu primer intento. De lo contrario deje 
+                                    blanco o cancele el programa `));
+                
+    if (numeroEscogido == "null" || numeroEscogido == "" ) {
+        ejecuteDo =1;
+        alert( `no se escogio un numero: No se realizará el juego}`);
+
+    } else {
+
+        let continueJuego = 1;
+        let numeroAzar = (Math.floor(Math.random() * (maximo - minimo +1) + minimo));
+        let numeroEs ="";
+        let intentos= 0
+
+        do{
+            intentos ++;
+            console.log(` Azar: ${numeroAzar}  -   Intentos2 ${intentos}`);
+
+            if (numeroEscogido == numeroAzar) {   
+                continueJuego = 0;
+                alert(`¡Felicitaciones! En ${intentos} ${intentos == 1 ? " lntento" : " intentos" } has  adivinado el número ${numeroAzar}`); 
+           
+            } else{
+                numeroEscogido = Number(prompt(`Intento ${intentos} ha fallado porque el número escogido es ${numeroEscogido < numeroAzar ? "menor" : "mayor"} que el de la máquina. Por favor intente de nuevo.  `));
+            }
+
+            if (intentos == 4){
+                continueJuego = 0;
+                alert(` No se logró adivinar el número ${numeroAzar} en los cinco intentos. Puedes iniciar de mnuevo otro juego. Gracias`);
+            }
+
+        } while (continueJuego == 1)
+    }
 }
