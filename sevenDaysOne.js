@@ -187,46 +187,40 @@ function diaCuatro(){
     let maximo = 100 ;
     let minimo = 1;
     var tiradas = 4;
-    var  numeroEscogido = Number(prompt(`La cuestión es si puedes adivinar un número entre ${minimo} y ${maximo}, en máximo  4
-                                    intentos. Si acepta el reto, por favor indica el numero de  tu primer intento. De lo contrario deje 
-                                    blanco o cancele el programa `));
+    var numeroEscogido = 0;
+    var intentos= 0;
+    var continueJuego = 1;
+    var numeroAzar = parseInt(Math.floor(Math.random() * (maximo - minimo +1) + minimo));
+
+    alert( `La cuestión es si puedes adivinar un número entre ${minimo} y ${maximo}, en máximo  4  intentos.`) ;  
+
+    console.log(` Azar: ${numeroAzar}`);
+
+    do{
+        intentos = intentos + 1;              
+        console.log(`INTENTOS:${intentos}`);
+
+        if (intentos > 4){
+
+            alert(`Has superado el número de intentos para adivinar el número ${numeroAzar}. Puedes iniciar de nuevo`)
+            continueJuego = 0
+            break 
+
+        }   else{            
+                numeroEscogido = Number(prompt(` Realiza tu intento ${intentos}.`));
+
+                if (numeroEscogido == numeroAzar) {
+
+                    alert(` ¡Felicitaciones! en ${intentos} ${intentos == 1 ? "intento" : "intentos"} has adivinado el número ${numeroAzar}`);
+                    continueJuego = 0;
                 
-    if (numeroEscogido == "null" || numeroEscogido == "" ) {
-        ejecuteDo =1;
-        alert( `no se escogio un numero: No se realizará el juego}`);
+                } else{
 
-    } else {
-
-        var continueJuego = 1;
-        var numeroAzar = (Math.floor(Math.random() * (maximo - minimo +1) + minimo));
-        var intentos= 1;
-
-        do{
-            
-            console.log(` Azar: ${numeroAzar}`);
-
-            if (numeroEscogido == numeroAzar) {   
-                continueJuego = 0;
-                alert(`¡Felicitaciones! En ${intentos} ${intentos == 1 ? " lntento" : " intentos" } has  adivinado el número ${numeroAzar}`); 
-           
-            } else  {
-                numeroEscogido = Number(prompt(`Intento ${intentos} ha fallado porque el número escogido es ${numeroEscogido < numeroAzar ? "menor" : "mayor"} que el de la máquina. Por favor intente de nuevo.  `));
-                intentos ++;
-
-              if (numeroEscogido == null || numeroEscogido == "") {
-                    alert("has decidido cancelar. Si deseas, inicia de nuevo ")
-                    continueJuego = 0 ;
-                    break;
-                }       
-            }
-
-            console.log(`INTENTOS:${intentos}`);
-
-            if (intentos > 4) {
-                continueJuego = 0;
-                alert(` No se logró adivinar el número ${numeroAzar} en los cuatro intentos. Puedes iniciar de mnuevo otro juego. Gracias`);
-            }
-       
-        } while (continueJuego == 1)
-    }
+                    alert("El número no coincidió. Intenta nuevamente");
+                }
+        }
+      
+    } while (continueJuego == 1)
+  
 }
+
