@@ -216,7 +216,7 @@ function diaCuatro(){
                 
                 } else{
 
-                    alert("El número no coincidió. Intenta nuevamente");
+                    alert(`El número ${numeroEscogido}  es ${numeroEscogido < numeroAzar ? "menor" : "mayor" } que el número secreto. Intenta nuevamente`);
                 }
         }
       
