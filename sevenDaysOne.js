@@ -186,8 +186,8 @@ function diaCuatro(){
 
     let maximo = 100 ;
     let minimo = 1;
-    let tiradas = 4;
-    let  numeroEscogido = Number(prompt(`La cuestión es si puedes adivinar un número entre ${minimo} y ${maximo}, en máximo  5
+    var tiradas = 4;
+    var  numeroEscogido = Number(prompt(`La cuestión es si puedes adivinar un número entre ${minimo} y ${maximo}, en máximo  4
                                     intentos. Si acepta el reto, por favor indica el numero de  tu primer intento. De lo contrario deje 
                                     blanco o cancele el programa `));
                 
@@ -197,28 +197,36 @@ function diaCuatro(){
 
     } else {
 
-        let continueJuego = 1;
-        let numeroAzar = (Math.floor(Math.random() * (maximo - minimo +1) + minimo));
-        let numeroEs ="";
-        let intentos= 0
+        var continueJuego = 1;
+        var numeroAzar = (Math.floor(Math.random() * (maximo - minimo +1) + minimo));
+        var intentos= 1;
 
         do{
-            intentos ++;
-            console.log(` Azar: ${numeroAzar}  -   Intentos2 ${intentos}`);
+            
+            console.log(` Azar: ${numeroAzar}`);
 
             if (numeroEscogido == numeroAzar) {   
                 continueJuego = 0;
                 alert(`¡Felicitaciones! En ${intentos} ${intentos == 1 ? " lntento" : " intentos" } has  adivinado el número ${numeroAzar}`); 
            
-            } else{
+            } else  {
                 numeroEscogido = Number(prompt(`Intento ${intentos} ha fallado porque el número escogido es ${numeroEscogido < numeroAzar ? "menor" : "mayor"} que el de la máquina. Por favor intente de nuevo.  `));
+                intentos ++;
+
+              if (numeroEscogido == null || numeroEscogido == "") {
+                    alert("has decidido cancelar. Si deseas, inicia de nuevo ")
+                    continueJuego = 0 ;
+                    break;
+                }       
             }
 
-            if (intentos == 4){
+            console.log(`INTENTOS:${intentos}`);
+
+            if (intentos > 4) {
                 continueJuego = 0;
-                alert(` No se logró adivinar el número ${numeroAzar} en los cinco intentos. Puedes iniciar de mnuevo otro juego. Gracias`);
+                alert(` No se logró adivinar el número ${numeroAzar} en los cuatro intentos. Puedes iniciar de mnuevo otro juego. Gracias`);
             }
-
+       
         } while (continueJuego == 1)
     }
 }
