@@ -14,6 +14,7 @@
 *{
     padding: 0;
     margin:0;
+    font-weight:100px
 }
 
 body{
@@ -21,6 +22,8 @@ body{
     background-color: var(--color-body);
 	font-family: var(--fuente-gothicA1);
     color: var(--color-font);
+    font-size:24px;
+    
 }
 
 .Encabezado {
@@ -37,6 +40,7 @@ body{
     background-image: url("./tools/logo7DOfCode.png") ;
     background-repeat: no-repeat;
 }
+
 
 button{
     border-radius: 8px;
@@ -132,4 +136,25 @@ button.hover{
     margin-left: 3.5rem;
     height: 3rem;
     width: 9rem;
+ }
+
+.diaQuinto{
+
+    border: 1px solid var(--color-font);
+    margin-left: 5rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    margin-bottom:2rem;
+    padding: 2rem;
+    height: 10rem;
+}
+
+
+ @media (max-width: 900px) {
+
+    body{
+
+        font-size: 9px;
+
+    }
  }

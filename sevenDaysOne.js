@@ -224,3 +224,24 @@ function diaCuatro(){
   
 }
 
+
+// ------------------------------------------------------- Quinta Clase0*----------------------------------------------
+
+function diaQuinto() {
+
+    let items =[];
+    var grupoProductos =["Frutas","Lacteos","Congelados", "Dulces", "Carnicos", "Verduras"];
+
+    var select = document.getElementById("grupoProducto");
+    var lineaProductos =["Frutas","Lacteos","Congelados", "Dulces", "Carnicos", "Verduras"];
+
+    for (var i = 0; i < lineaProductos.length; i++) {
+
+        var linea = lineaProductos[i];
+        var e1 = document.createElement("option");
+        e1.text = linea;
+        e1.value = linea;
+        select.add(e1);
+    }
+
+}
