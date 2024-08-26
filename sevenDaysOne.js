@@ -272,9 +272,6 @@ function diaQuintoguardar(){
         if (status == null){
             console.log("está fallo");
 
-            
-
-
 
         }else {
 
