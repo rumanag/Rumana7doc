@@ -15,44 +15,67 @@
 </head>
 <body>
     
-    <header class="Encabezado"><strong>7 Days of Code</strong></header>
+    <header class="Encabezado"><h1><strong>7 Days of Code</strong></h1></header>
     <main class="principal"> 
 
-                <section class="diaPrimero"><strong> Dia primero: Comportamiento de variables </strong><br>
+                <section class="diaPrimero"><strong><p class="diaFuncion">Dia primero: Comportamiento de variables </p></strong>
 
-                    <button  class="numeroUno" type="button" onclick="compararUno()"> Compare Variables Uno </button>
-                    <button  class="numeroTreinta" type="button" onclick="compararTreinta()"> Compare Variables Treinta</button>
-                    <button  class="numeroDiez" type="button" onclick="compararDiez()"> Compare Variables Diez</button>
+                    <button  class="boton" type="button" onclick="compararUno()"> Compare Variables Uno </button>
+                    <button  class="boton" type="button" onclick="compararTreinta()"> Compare Variables Treinta</button>
+                    <button  class="boton" type="button" onclick="compararDiez()"> Compare Variables Diez</button>
                 </section>
 
-                <section class="diaSegundo"><strong>Dia segundo: Variables y condicionales</strong>
-                    
-                    <button class="preguntasPersona" type= "button" onclick="diaDos()">Preguntas</button>
-                </section>>
+                <section class="diaSegundo"><p class="diaFuncion"><strong>Dia segundo: Variables y condicionales</strong></p>
 
-                <section class="diaTercero"><strong>Dia tercero: Estructuras de Control Flujo</strong>
-                    
-                    <button class="alternativas" type= "button" onclick="diaTres()">Alternativas</button>
+                    <button class="boton" type= "button" onclick="diaDos()">Preguntas</button>
                 </section>
 
-                <section class="diaCuatro"><strong>Dia cuarto: Adivinar un número de dos Digitos</strong>
+                <section class="diaTercero"><p class="diaFuncion"><strong>Dia tercero: Estructuras de Control Flujo</strong></p>
                     
-                    <button class="adivinaNumero" type= "button" onclick="diaCuatro()" >Adivinar Número </button>
+                    <button class="boton" type= "button" onclick="diaTres()">Alternativas</button>
+                </section>
 
+                <section class="diaCuatro"><p class="diaFuncion"><strong>Dia cuarto: Adivinar un número de dos Digitos</strong></p>
+                    
+                    <button class="boton" type= "button" onclick="diaCuatro()" >Adivinar Número </button>
                 </section>
 
                 <section class = "diaQuinto"> 
                     
-                    <label  for = "grupoProducto" ><strong>Día Quinto: lista de compras del supermercado</strong></label><br>
-                        
-                    <select id="grupoProducto"  onclick ="diaQuinto()" name="grupo" >
+                    <div class="opcion">
+                        <label  for = "grupoProducto" >
+                            <p class="diaFuncion"><strong>Día Quinto: lista de compras del supermercado</strong></p>
+                        </label>
                             
-                    <   option class="opciones"  diaQuinto()>Escoja el Grupo del Producto</option>  
+                        <select id="grupoProducto"  onclick ="diaQuinto()" >
+                           
+                            <option id="opcion"  diaQuinto()>Escoja el Grupo del Producto</option> 
+                       
+                        </select> 
+
+                        <textarea id= "item"  cols= "45" rows= "2" placeholder="Ingrese el item aquí"> </textarea> 
                     
-                    </select> 
-              
+                    </div>
+                    
+                    <button class="boton"  type="button" onclick="diaQuintoguardar()" >Guardar</button>
+
                 </section>
-                
+                <div>
+                    <table class="stock" id="stock">
+
+                            <tr class ="cabezaRows">
+                                <th>Tipo de Producto</th>
+                                <th>producto</th>
+                            </tr>
+                            <tr class="fila">
+
+                            </tr>
+
+
+                    </table>
+
+
+                </div>
 
     </main>
      

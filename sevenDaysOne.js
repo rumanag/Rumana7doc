@@ -4,14 +4,8 @@
 
 // -------------------------------------------------------Primera Clase0*----------------------------------------------
 
-let numeroUn = 1
-let stringUn = '1'
-
-let numeroTreinta = 30
-let stringTreinta = '30'
-
-let numeroDiez = 10
-let stringDiez = '10'
+var cicloPrimero = "si"
+var productosEnStock =[]
 
 
 function compararUno() {
@@ -23,6 +17,15 @@ function compararUno() {
     console.log('Las variables numeroUn y stringUn no tienen el mismo valor')
     }
     */
+
+    let numeroUn = 1
+    let stringUn = '1'
+
+    let numeroTreinta = 30
+    let stringTreinta = '30'
+
+    let numeroDiez = 10
+    let stringDiez = '10'
 
     if (numeroUn == stringUn){    
         console.log(` numeroUn == stringUn numeroUn : numeroUn=${numeroUn}-${typeof(numeroUn)} y stringUn=${stringUn}-${typeof(stringUn)}
@@ -210,18 +213,14 @@ function diaCuatro(){
                 numeroEscogido = Number(prompt(` Realiza tu intento ${intentos}.`));
 
                 if (numeroEscogido == numeroAzar) {
-
                     alert(` ¡Felicitaciones! en ${intentos} ${intentos == 1 ? "intento" : "intentos"} has adivinado el número ${numeroAzar}`);
                     continueJuego = 0;
                 
                 } else{
-
                     alert(`El número ${numeroEscogido}  es ${numeroEscogido < numeroAzar ? "menor" : "mayor" } que el número secreto. Intenta nuevamente`);
                 }
         }
-      
     } while (continueJuego == 1)
-  
 }
 
 
@@ -229,19 +228,64 @@ function diaCuatro(){
 
 function diaQuinto() {
 
-    let items =[];
-    var grupoProductos =["Frutas","Lacteos","Congelados", "Dulces", "Carnicos", "Verduras"];
+    if (cicloPrimero ==="si"){
 
-    var select = document.getElementById("grupoProducto");
-    var lineaProductos =["Frutas","Lacteos","Congelados", "Dulces", "Carnicos", "Verduras"];
-
-    for (var i = 0; i < lineaProductos.length; i++) {
-
-        var linea = lineaProductos[i];
-        var e1 = document.createElement("option");
-        e1.text = linea;
-        e1.value = linea;
-        select.add(e1);
+        cicloPrimero = "n0";
+        var grupoProductos =["Frutas","Lacteos","Congelados", "Dulces", "Carnicos", "Verduras"];
+        var select = document.getElementById("grupoProducto");
+    
+        var lineaProductos =["Frutas","Lacteos","Congelados", "Dulces", "Carnicos", "Verduras"];
+    
+        for (var i = 0; i < lineaProductos.length; i++) {
+            var linea = lineaProductos[i];
+            var e1 = document.createElement("option");
+            e1.text = linea;
+            e1.value = linea;
+            select.add(e1);
+        }
     }
 
+
+
+
+
 }
+
+function diaQuintoguardar(){
+    var mySelectedgroup = document.getElementById("grupoProducto").value;
+    var myselectedintem = document.getElementById("item").value;
+    var mytable = document.getElementById("stock");
+    var myRows = document.querySelectorAll('#stock tr.fila');
+    // verifica si ya existe el produdcto
+
+    const tableRows = document.querySelectorAll('#stock tr.fila');
+
+    // Recorremos las filas que tengan el class="row"
+    // así obviamos la cabecera
+   
+    for(let i=0; i<myRows.length; i++) {
+    
+        const row = myRows[i];
+    
+        const status = row.querySelector('.status');
+       
+        if (status == null){
+            console.log("está fallo");
+
+            
+
+
+
+        }else {
+
+            console.log("está bueno");
+        }
+
+
+
+
+
+       // console.log('Estado: ', status.innerText);
+    }
+
+} 

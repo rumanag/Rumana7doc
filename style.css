@@ -14,147 +14,87 @@
 *{
     padding: 0;
     margin:0;
-    font-weight:100px
-}
 
 body{
     box-sizing: border-box;
     background-color: var(--color-body);
 	font-family: var(--fuente-gothicA1);
     color: var(--color-font);
-    font-size:24px;
-    
+}
+
+}
+h1{
+    font-size: 2.5rem;
 }
 
 .Encabezado {
+    height: 3rem;
+    width: 64rem;
     border:1px solid var(--color-font);
-    height: 3.5rem;
     margin-left: 5rem;
     margin-right: 10rem;
     margin-top: 2rem;
     text-align:center;
-    font-weight: 600px;
+    font-weight: 400px;
     font-size: 2.5rem;
     font-family: var(  --fuente-gothicA1);
     background-color: var(--color-header);   
     background-image: url("./tools/logo7DOfCode.png") ;
+    background-position-y: center;
     background-repeat: no-repeat;
 }
 
 
-button{
-    border-radius: 8px;
-    font-size: 1rem;
-
-}
-
-button.hover{
-    background-color: #618fc4;
-}
-
-
- .diaPrimero{
-    border: 1px solid var(--color-font);
-    margin-left: 5rem;
-    margin-right: 10rem;
-    margin-top: 2rem;
-    padding: 2rem;
+section{
     display:flex;
-    height:3rem;
-    gap: 3rem;
-    margin-left: 5rem;
-    margin-right: 10rem;
-    margin-top: 2rem;
-    font-weight:400px;
-    font-size:1.7rem;
-    font-family: var( --fuente-gothicA1);
-    background-color:var ( --color-dia);
-
- }
-
- .diaSegundo{
+    gap:0rem;
+    height: 3.5rem;
+    width: 64rem;
     border: 1px solid var(--color-font);
     margin-left: 5rem;
-    margin-right: 10rem;
-    margin-top: 2rem;
-    padding: 2rem;
-    height:3rem;
-    margin-left: 5rem;
-    margin-right: 10rem;
-    margin-top: 2rem;
-    font-weight:400px;
-    font-size:1.7rem;
-    font-family: var( --fuente-gothicA1);
-    background-color:var ( --color-dia);
- }
- 
- .preguntasPersona{
-    margin-left: 3.5rem;
-    height: 3rem;
-    width: 9rem;
- }
-
- .diaTercero{
-    border: 1px solid var(--color-font);
-    margin-left: 5rem;
-    margin-right: 10rem;
-    margin-top: 2rem;
-    padding: 2rem;
-    height:3rem;
-    margin-left: 5rem;
-    margin-right: 10rem;
-    margin-top: 2rem;
-    font-weight:400px;
-    font-size:1.7rem;
-    font-family: var(--fuente-gothicA1);
-    background-color:var ( --color-dia);
- }
-
- .alternativas{
-    margin-left: 3.5rem;
-    height: 3rem;
-    width: 9rem;
- }
-
- .diaCuatro{
-    border: 1px solid var(--color-font);
-    margin-left: 5rem;
-    margin-right: 10rem;
-    margin-top: 2rem;
-    padding: 2rem;
-    height:3rem;
-    margin-left: 5rem;
-    margin-right: 10rem;
-    margin-top: 2rem;
-    font-weight:400px;
-    font-size:1.7rem;
-    font-family: var(--fuente-gothicA1);
-    background-color:var ( --color-dia);
- }
-
- .adivinaNumero{
-    margin-left: 3.5rem;
-    height: 3rem;
-    width: 9rem;
- }
-
-.diaQuinto{
-
-    border: 1px solid var(--color-font);
-    margin-left: 5rem;
-    margin-right: 10rem;
-    margin-top: 2rem;
-    margin-bottom:2rem;
-    padding: 2rem;
-    height: 10rem;
+    margin-right: 5rem;
+    margin-top: 0.2rem;
+    padding-top:0.4em;
 }
+
+.diaFuncion{
+
+    width:22rem;
+    font-weight: 400px;
+    font-size: 1rem;
+    font-family: var( --fuente-gothicA1);
+    background-color:var ( --color-dia);
+    margin-left:1rem;
+}
+ 
+.boton:hover{
+    background-color:  #7eb6eb;
+}
+ 
+ .boton{
+    border-radius: 8px;
+    font-size: 0.8rem;
+    margin-left:5rem;
+    margin-top: 0rem;
+    height:2rem;
+    width: 8rem;
+ }
+
+.opcion{
+    display:flex;
+    gap:1rem;
+    width:50rem;
+    height:3rem;
+}
+
 
 
  @media (max-width: 900px) {
 
     body{
 
-        font-size: 9px;
+    font:1rem;
+    width:20rem;
 
     }
  }
